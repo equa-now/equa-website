@@ -48,6 +48,11 @@ web_modules/
 *.tsbuildinfo
 
 # Optional npm cache directory
+.env
+
+# Production build output
+dist
+
 .npm
 
 # Optional eslint cache
