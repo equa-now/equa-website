@@ -74,6 +74,7 @@ a {
   padding: 1.5rem 1.5rem 0;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .brand {
@@ -93,8 +94,8 @@ a {
   color: var(--muted);
 }
 
-.main {
-  flex: 1;
+.site-nav a:hover {
+  color: var(--text);
 }
 
 .hero-section {
@@ -105,14 +106,6 @@ a {
 
 .hero-copy {
   max-width: 700px;
-}
-
-.eyebrow {
-  margin: 0 0 1rem;
-  color: var(--accent);
-  font-size: 0.95rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
 }
 
 .hero-section h1 {
@@ -143,7 +136,7 @@ a {
   padding: 0 1.6rem;
   border-radius: 999px;
   border: 1px solid transparent;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
 .button:hover,
@@ -157,20 +150,32 @@ a {
   box-shadow: 0 16px 40px rgba(35, 61, 115, 0.14);
 }
 
+.button-primary:hover {
+  background-color: #1c3160;
+}
+
 .button-secondary {
   background-color: transparent;
   color: var(--primary);
   border-color: var(--border);
 }
 
-.section {
+/* Full-width band sections */
+.section-band {
+  background: #f2f3f6;
+  width: 100%;
+}
+
+.section-inner {
   padding: 3rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.section-alt {
-  background: #f2f3f6;
+.section {
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .section-header {
@@ -186,10 +191,18 @@ a {
   font-size: 0.78rem;
 }
 
-.section h2 {
+.section h2,
+.section-inner h2 {
   margin: 0;
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  line-height: 1.1;
+  font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+  line-height: 1.15;
+}
+
+.who-description {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  max-width: 620px;
 }
 
 .card-grid {
@@ -220,82 +233,96 @@ a {
   }
 }
 
-.info-card,
 .feature-card,
-.founder-card,
-.value-card {
+.founder-card {
   background: var(--surface);
   border: 1px solid var(--border);
   padding: 1.75rem;
-  border-radius: 24px;
+  border-radius: 16px;
   box-shadow: var(--shadow);
 }
 
-.info-card h3,
 .feature-card h3,
-.founder-card h3,
-.value-card h3 {
+.founder-card h3 {
   margin-top: 0;
-  margin-bottom: 0.85rem;
-  font-size: 1.12rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
 }
 
-.info-card p,
 .feature-card p,
-.founder-card p,
-.value-card p {
+.founder-card p {
   margin: 0;
   color: var(--muted);
-}
-
-.three-column-grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-@media (min-width: 900px) {
-  .three-column-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+  font-size: 0.95rem;
 }
 
 .founder-card {
-  min-height: 160px;
+  display: flex;
+  flex-direction: column;
 }
 
-.final-cta {
-  padding: 4rem 1.5rem;
-  background: linear-gradient(180deg, rgba(35, 61, 115, 0.05) 0%, rgba(247, 247, 250, 1) 100%);
+.founder-linkedin {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
-.final-cta-copy {
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.final-cta-copy h2 {
-  margin: 0 0 1.5rem;
-  font-size: clamp(2rem, 3vw, 3rem);
+.founder-linkedin:hover {
+  color: var(--primary);
 }
 
 .site-footer {
-  padding: 2rem 1.5rem 3rem;
+  margin-top: auto;
+  padding: 2.5rem 1.5rem 3rem;
   border-top: 1px solid var(--border);
   background: #f2f3f6;
   text-align: center;
   color: var(--muted);
 }
 
-.site-footer strong {
-  display: block;
+.footer-brand {
+  font-weight: 700;
   font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: var(--muted);
+}
+
+.footer-links a:hover {
   color: var(--text);
 }
 
+.footer-copy {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
 @media (min-width: 760px) {
-  .site-header,
+  .site-header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .section,
+  .section-inner,
   .hero-section {
     padding-left: 2rem;
     padding-right: 2rem;
