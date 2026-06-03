@@ -126,7 +126,7 @@ function App() {
         <div className="footer-links">
           <a href="mailto:hello@equa.now">hello@equa.now</a>
           <a
-            href="https://www.linkedin.com/company/placeholder-equa"
+            href="https://www.linkedin.com/company/equa-now"
             target="_blank"
             rel="noopener noreferrer"
           >
