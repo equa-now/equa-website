@@ -6,7 +6,9 @@ function App() {
       </a>
 
       <header className="site-header">
-        <div className="brand">Equa</div>
+        <div className="brand">
+          <img src="/images/equa-logo-primary.png" alt="Equa" className="brand-logo" />
+        </div>
         <nav aria-label="Primary navigation" className="site-nav">
           <a href="#what-we-help-with">What we do</a>
           <a href="#founders">Team</a>
@@ -76,10 +78,11 @@ function App() {
             </div>
             <div className="card-grid cards-three">
               <article className="founder-card">
+                <img src="/images/americus.jpeg" alt="Americus Reed" className="founder-photo" />
                 <h3>Americus Reed</h3>
                 <p>Consumer identity scholar and marketing professor at the Wharton School.</p>
                 <a
-                  href="https://www.linkedin.com/in/placeholder-americus-reed"
+                  href="https://www.linkedin.com/in/americus-reed-ii-85b70154/"
                   className="founder-linkedin"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -88,10 +91,11 @@ function App() {
                 </a>
               </article>
               <article className="founder-card">
+                <img src="/images/samuel.jpeg" alt="Samuel Botts" className="founder-photo" />
                 <h3>Samuel Botts</h3>
                 <p>Marketing strategy and growth leader with deep B2B and consumer expertise.</p>
                 <a
-                  href="https://www.linkedin.com/in/placeholder-samuel-botts"
+                  href="https://www.linkedin.com/in/samuel-botts-jr/"
                   className="founder-linkedin"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -100,10 +104,11 @@ function App() {
                 </a>
               </article>
               <article className="founder-card">
+                <img src="/images/jeremiah.jpeg" alt="Jeremiah Marble" className="founder-photo" />
                 <h3>Jeremiah Marble</h3>
                 <p>AI product leader, technologist, and educator.</p>
                 <a
-                  href="https://www.linkedin.com/in/placeholder-jeremiah-marble"
+                  href="https://www.linkedin.com/in/jeremiahmarble/"
                   className="founder-linkedin"
                   target="_blank"
                   rel="noopener noreferrer"

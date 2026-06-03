@@ -78,10 +78,13 @@ a {
 }
 
 .brand {
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 34px;
+  width: auto;
 }
 
 .site-nav {
@@ -259,6 +262,14 @@ a {
 .founder-card {
   display: flex;
   flex-direction: column;
+}
+
+.founder-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 .founder-linkedin {
