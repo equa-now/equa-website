@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
-  <!-- Four rings -->
-  <circle cx="40" cy="40" r="30" fill="none" stroke="#BB0A30" stroke-width="5"/>
-  <circle cx="80" cy="40" r="30" fill="none" stroke="#BB0A30" stroke-width="5"/>
-  <circle cx="120" cy="40" r="30" fill="none" stroke="#BB0A30" stroke-width="5"/>
-  <circle cx="160" cy="40" r="30" fill="none" stroke="#BB0A30" stroke-width="5"/>
-  <text x="200" y="48" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#BB0A30" text-anchor="middle">Audi</text>
-</svg>
