@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 80" width="220" height="80">
+  <!-- Infinity loop approximation -->
+  <path d="M30 40 C30 28 40 22 52 22 C64 22 74 30 84 40 C74 50 64 58 52 58 C40 58 30 52 30 40Z M84 40 C84 28 94 22 106 22 C118 22 128 30 128 40 C128 50 118 58 106 58 C94 58 84 52 84 40Z" fill="none" stroke="#0082FB" stroke-width="8"/>
+  <text x="158" y="52" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="bold" fill="#0082FB" text-anchor="middle">Meta</text>
+</svg>

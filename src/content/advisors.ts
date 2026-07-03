@@ -1,0 +1,154 @@
+export interface Advisor {
+  name: string;
+  title: string;
+  bio: string;
+  headshot: string;
+  tags: string[];
+}
+
+export const advisors: Advisor[] = [
+  {
+    name: 'Lee Applbaum',
+    title: 'Global CMO, Patrón Spirits & Wheels Up',
+    bio: 'Award-winning marketing executive with 25+ years building iconic consumer brands. Former Global CMO of Patrón Spirits and CMO of Wheels Up, with prior leadership at The Coca-Cola Company. A recipient of Adweek\'s Brand Genius Award, Lee is recognized by Business Insider as one of the world\'s most innovative CMOs.',
+    headshot: '/advisors/lee-applbaum.jpg',
+    tags: ['Brand Strategy', 'Premium Positioning', 'CMO Leadership'],
+  },
+  {
+    name: 'David Bell',
+    title: 'Co-Founder & President, Idea Farm Ventures',
+    bio: 'Co-founder and President of Idea Farm Ventures, with landmark exits including Bonobos ($310M), Diapers.com ($545M), Jet.com ($3.3B), and Touchland ($880M). Referred to as "the guru of the DTC movement" by Inc. Magazine, David spent 20 years as a chaired Wharton professor and holds a Ph.D. from Stanford.',
+    headshot: '/advisors/david-bell.jpg',
+    tags: ['DTC Strategy', 'Consumer Behavior', 'Venture'],
+  },
+  {
+    name: 'Catherine Connely',
+    title: 'Co-Founder, myYearbook / The Meet Group',
+    bio: 'Co-founded myYearbook as a teenager, scaling it into The Meet Group — a NASDAQ-listed social discovery company acquired for $500 million. A serial entrepreneur, author, and keynote speaker, Catherine has two decades of expertise in digital brand building, consumer growth marketing, and social identity. Wharton MBA, Georgetown B.S.',
+    headshot: '/advisors/catherine-connely.jpg',
+    tags: ['Digital Growth', 'Consumer Identity', 'Startup Scaling'],
+  },
+  {
+    name: 'Charles Herman, M.D., M.B.A.',
+    title: 'Physician Executive & AI Innovator',
+    bio: 'Physician executive and investor at the intersection of medicine, technology, and AI. President of Herman Aesthetiques, Chief Science Officer at Vitalist, and Senior Portfolio Advisor at Forefront Analytics. His NSF-funded research spans AI applications in medicine and behavioral science. Author of ~100 scientific publications; Wharton MBA with Honors.',
+    headshot: '/advisors/charles-herman.jpg',
+    tags: ['AI & Healthcare', 'Medical Research', 'Investment'],
+  },
+  {
+    name: 'Kathy Hines',
+    title: 'Former Global CMO, Nike & The North Face',
+    bio: 'Globally recognized marketing executive and former Global CMO with career leadership at Nike, The North Face, Dickies, Dell, and WPP. A Wharton MBA, Kathy has driven double-digit revenue growth through large-scale brand repositioning, digital transformation, and global expansion across the Americas, Europe, and Asia.',
+    headshot: '/advisors/kathy-hines.jpg',
+    tags: ['Global Marketing', 'Brand Positioning', 'Digital Transformation'],
+  },
+  {
+    name: 'Michael Platt, Ph.D.',
+    title: 'Director, Wharton Neuroscience Initiative',
+    bio: 'Director of the Wharton Neuroscience Initiative and Penn Integrates Knowledge (PIK) University Professor at the University of Pennsylvania, with joint appointments across Medicine, Business, and Arts and Sciences. One of the world\'s foremost authorities on the neuroscience of decision-making and consumer behavior. Author of The Leader\'s Brain.',
+    headshot: '/advisors/michael-platt.jpg',
+    tags: ['Neuroscience', 'Consumer Behavior', 'Decision Science'],
+  },
+  {
+    name: 'Elizabeth Windram',
+    title: 'EVP Marketing, CLEAR | Former VP, JetBlue',
+    bio: 'Senior marketing executive who served as EVP of Marketing at CLEAR, Global Head of Mobility Marketing at Uber, and VP of Marketing at JetBlue. Winner of Adweek\'s Grand Brand Genius Award in 2016, Elizabeth brings a distinctive lens on how identity shapes consumer loyalty and brand engagement. Wharton MBA.',
+    headshot: '/advisors/elizabeth-windram.jpg',
+    tags: ['Brand Strategy', 'Customer Experience', 'Identity'],
+  },
+  {
+    name: 'Kes Peckorius',
+    title: 'Head of Store Operations, Burlington Stores',
+    bio: 'Leads Store Operations for Burlington Stores (Fortune 500, $12B+ in annual sales). Previously built Meta Reality Labs\' Eye Care organization for AI-powered smart glasses, and helped lead the LensCrafters turnaround at EssilorLuxottica. A former Boston Consulting Group Principal with deep expertise in retail, technology, and AI-driven commerce.',
+    headshot: '/advisors/kes-peckorius.jpg',
+    tags: ['Retail Operations', 'AI Commerce', 'Strategy Consulting'],
+  },
+  {
+    name: 'Ted Wright',
+    title: 'CEO, Fizz | Pioneer of Word of Mouth Marketing',
+    bio: 'CEO of Fizz since 2001, Ted Wright pioneered modern word-of-mouth marketing serving clients including Coca-Cola, LVMH, JetBlue, Audi, and Intel across 13 time zones. Named "the Pioneer of modern Word of Mouth Marketing" by Philip Kotler, Ted is the author of Fizz and a Wharton lecturer since 2010.',
+    headshot: '/advisors/ted-wright.jpg',
+    tags: ['Word of Mouth', 'Growth Marketing', 'Brand Strategy'],
+  },
+  {
+    name: 'Scott Roslyn',
+    title: 'Founder, This Is Alignment',
+    bio: 'Founder of This Is Alignment, a consultancy at the intersection of brand strategy, organizational culture, and motivational psychology. Scott helps organizations close the gap between how they define their brand and how they actually live it — building durable brand equity through measurable cultural behaviors and organizational identity alignment.',
+    headshot: '/advisors/scott-roslyn.jpg',
+    tags: ['Brand Culture', 'Motivational Psychology', 'Organizational Identity'],
+  },
+  {
+    name: 'Sharon Ravitch',
+    title: 'Expert in Organizational Psychology & Leadership',
+    bio: 'Expert in organizational psychology, leadership development, and systems change at the intersection of people, culture, and technology. A trusted advisor and designer of catalytic learning architectures, Sharon helps leaders and organizations build adaptive capacity and drive meaningful change. Her expertise in human-centered transformation and responsible AI adoption informs Equa\'s approach.',
+    headshot: '/advisors/sharon-ravitch.jpg',
+    tags: ['Organizational Psychology', 'Leadership Development', 'AI Adoption'],
+  },
+  {
+    name: 'Gvantsa Mdinaradze',
+    title: 'Founder & CEO, EdBridge',
+    bio: 'Founder and CEO of EdBridge, a learning consultancy that connects capability development directly to organizational culture and business outcomes. A Harvard alumna and University of Pennsylvania doctoral scholar, Gwen brings expertise in behavioral science, adaptive leadership, and enterprise performance — enriching Equa\'s ability to translate identity insights into lasting organizational change.',
+    headshot: '/advisors/gvantsa-mdinaradze.jpg',
+    tags: ['Behavioral Science', 'Learning & Development', 'Leadership'],
+  },
+  {
+    name: 'Harry Cicma',
+    title: 'CEO, Harry Cicma Productions | NBC Sports Anchor',
+    bio: 'CEO and Founder of Harry Cicma Productions, one of the leading sports production firms in the United States. A former ATP Tour-ranked professional tennis player and NBC Sports Anchor who has covered the U.S. Open, NBA Finals, Wimbledon, and the Olympic Games. Wharton MBA, Rutgers University cum laude.',
+    headshot: '/advisors/harry-cicma.jpg',
+    tags: ['Sports Media', 'Brand Strategy', 'Audience Identity'],
+  },
+  {
+    name: 'Jesus Simosa',
+    title: 'Founder & CEO, CiaoGym',
+    bio: 'Founder and CEO of CiaoGym, an affordable luxury activewear brand built on 100% Made-in-Italy craftsmanship with a loyal international following. A Babson College MBA, Jesus brings entrepreneurial expertise in DTC brand building, luxury positioning, and the cultivation of consumer communities grounded in shared values and aspirational identity.',
+    headshot: '/advisors/jesus-simosa.jpg',
+    tags: ['Luxury DTC', 'Brand Building', 'International Retail'],
+  },
+  {
+    name: 'Dan Cataldi',
+    title: 'Founder & CEO, Groov',
+    bio: 'Founder and CEO of Groov, an AI-driven footwear company bridging mass-market products and individual biomechanical needs. A Wharton MBA and former NCAA Division I athlete, Dan built Groov at the intersection of artificial intelligence, consumer hardware, and personalized health. His builder\'s perspective on AI personalization directly informs Equa\'s frameworks.',
+    headshot: '/advisors/dan-cataldi.jpg',
+    tags: ['AI Personalization', 'Consumer Hardware', 'DTC'],
+  },
+  {
+    name: 'Donna Tschiffely',
+    title: 'Association & Nonprofit Executive',
+    bio: 'Association and nonprofit executive with more than five decades of leadership experience. For nearly 40 years, Donna owned and led a successful association management firm, guiding boards, expanding membership, and delivering mission-driven programs across diverse industries. Her deep expertise in governance and stakeholder engagement strengthens Equa\'s organizational advisory perspective.',
+    headshot: '/advisors/donna-tschiffely.jpg',
+    tags: ['Governance', 'Nonprofit Leadership', 'Stakeholder Engagement'],
+  },
+];
+
+export interface Logo {
+  src: string;
+  alt: string;
+}
+
+export const logos: Logo[] = [
+  { src: '/logos/nike.svg', alt: 'Nike' },
+  { src: '/logos/coca-cola.svg', alt: 'Coca-Cola' },
+  { src: '/logos/lvmh.svg', alt: 'LVMH' },
+  { src: '/logos/jetblue.svg', alt: 'JetBlue' },
+  { src: '/logos/meta.svg', alt: 'Meta' },
+  { src: '/logos/intel.svg', alt: 'Intel' },
+  { src: '/logos/audi.svg', alt: 'Audi' },
+  { src: '/logos/dell.svg', alt: 'Dell' },
+  { src: '/logos/uber.svg', alt: 'Uber' },
+  { src: '/logos/warby-parker.svg', alt: 'Warby Parker' },
+  { src: '/logos/patron.svg', alt: 'Patrón' },
+  { src: '/logos/wharton-school.svg', alt: 'Wharton School' },
+  { src: '/logos/harvard-university.svg', alt: 'Harvard University' },
+  { src: '/logos/stanford-university.svg', alt: 'Stanford University' },
+  { src: '/logos/boston-consulting-group.svg', alt: 'Boston Consulting Group' },
+  { src: '/logos/national-science-foundation.svg', alt: 'National Science Foundation' },
+  { src: '/logos/wpp.svg', alt: 'WPP' },
+  { src: '/logos/the-north-face.svg', alt: 'The North Face' },
+  { src: '/logos/clear.svg', alt: 'CLEAR' },
+  { src: '/logos/bonobos.svg', alt: 'Bonobos' },
+  { src: '/logos/touchland.svg', alt: 'Touchland' },
+  { src: '/logos/jet-com.svg', alt: 'Jet.com' },
+  { src: '/logos/wheels-up.svg', alt: 'Wheels Up' },
+  { src: '/logos/burlington-stores.svg', alt: 'Burlington Stores' },
+];

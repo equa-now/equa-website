@@ -1,17 +1,6 @@
 import { PageHero } from '../components/PageHero';
 import { CTASection } from '../components/CTASection';
-
-const advisors = [
-  { name: 'Advisor Name', title: 'Marketing Leadership' },
-  { name: 'Advisor Name', title: 'AI & Product Strategy' },
-  { name: 'Advisor Name', title: 'Research & Academic Partnerships' },
-  { name: 'Advisor Name', title: 'Go-to-Market Strategy' },
-  { name: 'Advisor Name', title: 'Brand & Customer Experience' },
-  { name: 'Advisor Name', title: 'Advisor Name' },
-];
-
-// Replace each entry with { src: '/images/logo-name.png', alt: 'Organization Name' }
-const placeholderLogos = Array(6).fill(null);
+import { advisors, logos } from '../content/advisors';
 
 export function Board() {
   return (
@@ -29,13 +18,19 @@ export function Board() {
             <h2 id="advisors-heading">Experienced across every dimension of modern marketing.</h2>
           </div>
           <div className="card-grid cards-three">
-            {advisors.map((advisor, i) => (
-              <article key={i} className="advisor-card">
-                <div className="advisor-avatar" aria-hidden="true">
-                  {/* Replace with advisor photo: <img src="..." alt={advisor.name} /> */}
+            {advisors.map((advisor) => (
+              <article key={advisor.name} className="advisor-card">
+                <div className="advisor-avatar">
+                  <img src={advisor.headshot} alt={advisor.name} loading="lazy" />
                 </div>
                 <h3 className="advisor-name">{advisor.name}</h3>
                 <p className="advisor-title">{advisor.title}</p>
+                <p className="advisor-bio">{advisor.bio}</p>
+                <div className="advisor-tags" aria-label="Areas of expertise">
+                  {advisor.tags.map((tag) => (
+                    <span key={tag} className="advisor-tag">{tag}</span>
+                  ))}
+                </div>
               </article>
             ))}
           </div>
@@ -48,16 +43,15 @@ export function Board() {
           <h2 id="network-heading">Connected to the organizations that matter.</h2>
         </div>
         <div className="logo-strip">
-          {placeholderLogos.map((_, i) => (
-            <div key={i} className="logo-item" aria-label="Logo placeholder">
-              {/* Replace with: <img src="/images/logo-name.png" alt="Organization" /> */}
-              <span className="logo-placeholder">Logo</span>
+          {logos.map((logo) => (
+            <div key={logo.alt} className="logo-item">
+              <img src={logo.src} alt={logo.alt} loading="lazy" />
             </div>
           ))}
         </div>
         <p className="logo-disclaimer">
-          Logos represent prior affiliations, collaborators, advisors, or institutions connected
-          to the Equa network. Final list to be updated.
+          Logos represent prior affiliations, employers, collaborators, and institutions connected
+          to Equa's advisory network.
         </p>
       </section>
 

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" width="260" height="80">
+  <!-- Half-dome icon approximation -->
+  <path d="M20 58 L20 35 C20 22 38 18 38 18 C38 18 56 22 56 35 L56 58Z" fill="#E31837"/>
+  <text x="155" y="38" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#E31837" text-anchor="middle" letter-spacing="1">THE NORTH</text>
+  <text x="155" y="58" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#E31837" text-anchor="middle" letter-spacing="1">FACE</text>
+</svg>

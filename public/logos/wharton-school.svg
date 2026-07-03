@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" width="260" height="80">
+  <!-- Penn shield simplified -->
+  <rect x="10" y="12" width="44" height="56" rx="4" fill="#990000"/>
+  <text x="32" y="45" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#F5DEB3" text-anchor="middle">W</text>
+  <text x="155" y="38" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#990000" text-anchor="middle" letter-spacing="1">THE WHARTON</text>
+  <text x="155" y="58" font-family="Georgia, serif" font-size="14" fill="#333333" text-anchor="middle" letter-spacing="1">SCHOOL · UPENN</text>
+</svg>
