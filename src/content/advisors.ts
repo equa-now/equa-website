@@ -127,13 +127,20 @@ export interface Logo {
 }
 
 export const logos: Logo[] = [
+  { src: '/logos/audi.svg', alt: 'Audi' },
   { src: '/logos/babson-college.svg', alt: 'Babson College' },
   { src: '/logos/bacardi.svg', alt: 'Bacardi' },
   { src: '/logos/barefoot-wine.svg', alt: 'Barefoot Wine' },
+  { src: '/logos/bcg.svg', alt: 'BCG' },
   { src: '/logos/bonobos.svg', alt: 'Bonobos' },
   { src: '/logos/brown-university.svg', alt: 'Brown University' },
+  { src: '/logos/burlington-stores.svg', alt: 'Burlington Stores' },
   { src: '/logos/ciaogym.svg', alt: 'CiaoGym' },
+  { src: '/logos/citi.svg', alt: 'Citi' },
+  { src: '/logos/clear.svg', alt: 'CLEAR' },
+  { src: '/logos/coca-cola.svg', alt: 'Coca-Cola' },
   { src: '/logos/cogwear.svg', alt: 'Cogwear' },
+  { src: '/logos/dell.svg', alt: 'Dell' },
   { src: '/logos/diapers-com.svg', alt: 'Diapers.com' },
   { src: '/logos/dickies.svg', alt: 'Dickies' },
   { src: '/logos/eandj-gallo-winery.svg', alt: 'E&J Gallo Winery' },
