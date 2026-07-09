@@ -2,20 +2,26 @@ import { PageHero } from '../components/PageHero';
 import { CTASection } from '../components/CTASection';
 import { advisors, logos } from '../content/advisors';
 
+function truncate(text: string, maxWords: number): string {
+  const words = text.split(' ');
+  if (words.length <= maxWords) return text;
+  return words.slice(0, maxWords).join(' ') + '…';
+}
+
 export function Board() {
   return (
     <>
       <PageHero
         overline="Advisory board"
-        headline="Built with guidance from leaders across marketing, technology, and research."
-        subheadline="Equa is shaped by experienced operators, advisors, and institutional perspectives who've built and scaled marketing at the highest levels."
+        headline="Guided by leaders who have built and scaled marketing at the highest levels."
+        subheadline="Equa's advisors bring operating experience from globally recognized brands, academic institutions, and venture-backed companies."
       />
 
-      <section className="section section-band" id="advisors" aria-labelledby="advisors-heading">
+      <section className="section-band" id="advisors" aria-labelledby="advisors-heading">
         <div className="section-inner">
           <div className="section-header">
-            <p className="section-overline">Advisors</p>
-            <h2 id="advisors-heading">Experienced across every dimension of modern marketing.</h2>
+            <span className="section-overline">Advisors</span>
+            <h2 id="advisors-heading">Deep expertise across every dimension of modern marketing.</h2>
           </div>
           <div className="card-grid cards-three">
             {advisors.map((advisor) => (
@@ -25,7 +31,7 @@ export function Board() {
                 </div>
                 <h3 className="advisor-name">{advisor.name}</h3>
                 <p className="advisor-title">{advisor.title}</p>
-                <p className="advisor-bio">{advisor.bio}</p>
+                <p className="advisor-bio">{truncate(advisor.bio, 32)}</p>
                 <div className="advisor-tags" aria-label="Areas of expertise">
                   {advisor.tags.map((tag) => (
                     <span key={tag} className="advisor-tag">{tag}</span>
@@ -39,8 +45,12 @@ export function Board() {
 
       <section className="section" id="network" aria-labelledby="network-heading">
         <div className="section-header">
-          <p className="section-overline">Network &amp; affiliations</p>
+          <span className="section-overline">Network &amp; affiliations</span>
           <h2 id="network-heading">Connected to the organizations that matter.</h2>
+          <p className="section-sub">
+            Prior employers, academic institutions, and collaborators connected to Equa's
+            advisory network.
+          </p>
         </div>
         <div className="logo-strip">
           {logos.map((logo) => (
@@ -50,8 +60,7 @@ export function Board() {
           ))}
         </div>
         <p className="logo-disclaimer">
-          Logos represent prior affiliations, employers, collaborators, and institutions connected
-          to Equa's advisory network.
+          Logos represent prior affiliations, employers, collaborators, and institutions.
         </p>
       </section>
 
@@ -59,7 +68,7 @@ export function Board() {
         headline="Ready to see Equa in action?"
         primaryLabel="Book a working session"
         primaryHref="mailto:hello@equa.now"
-        secondaryLabel="Meet the team"
+        secondaryLabel="Meet the founding team"
         secondaryHref="/team"
       />
     </>
