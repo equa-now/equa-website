@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
+import { TRY_EQUA_URL, CONTACT_URL } from '../config';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -15,6 +16,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
           <nav aria-label="Primary navigation" className="site-nav">
             <div className="site-nav-links">
+              <NavLink to="/" end className={({ isActive }) => isActive ? 'nav-active' : undefined}>
+                Home
+              </NavLink>
               <NavLink to="/solution" className={({ isActive }) => isActive ? 'nav-active' : undefined}>
                 Solution
               </NavLink>
@@ -24,9 +28,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <NavLink to="/board" className={({ isActive }) => isActive ? 'nav-active' : undefined}>
                 Board
               </NavLink>
+              <a href={CONTACT_URL}>Request a conversation</a>
             </div>
-            <a href="mailto:hello@equa.now" className="nav-cta">
-              Request a conversation
+            <a href={TRY_EQUA_URL} className="nav-cta">
+              Try Equa
             </a>
           </nav>
         </div>
@@ -38,7 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div className="site-footer-inner">
           <img src="/images/equa-logo-primary.png" alt="Equa" className="footer-logo" />
           <div className="footer-links">
-            <a href="mailto:hello@equa.now">hello@equa.now</a>
+            <a href={CONTACT_URL}>hello@equa.now</a>
             <a
               href="https://www.linkedin.com/company/equa-now"
               target="_blank"

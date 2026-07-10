@@ -5,6 +5,7 @@ interface CTASectionProps {
   sub?: string;
   primaryLabel: string;
   primaryHref: string;
+  onPrimaryClick?: () => void;
   secondaryLabel?: string;
   secondaryHref?: string;
 }
@@ -12,16 +13,18 @@ interface CTASectionProps {
 function SmartLink({
   href,
   className,
+  onClick,
   children,
 }: {
   href: string;
   className: string;
+  onClick?: () => void;
   children: React.ReactNode;
 }) {
   if (href.startsWith('/')) {
-    return <Link to={href} className={className}>{children}</Link>;
+    return <Link to={href} className={className} onClick={onClick}>{children}</Link>;
   }
-  return <a href={href} className={className}>{children}</a>;
+  return <a href={href} className={className} onClick={onClick}>{children}</a>;
 }
 
 export function CTASection({
@@ -29,6 +32,7 @@ export function CTASection({
   sub,
   primaryLabel,
   primaryHref,
+  onPrimaryClick,
   secondaryLabel,
   secondaryHref,
 }: CTASectionProps) {
@@ -38,7 +42,7 @@ export function CTASection({
         <h2 className="cta-headline">{headline}</h2>
         {sub && <p className="cta-sub">{sub}</p>}
         <div className="cta-actions">
-          <SmartLink href={primaryHref} className="button button-inverse-primary">
+          <SmartLink href={primaryHref} className="button button-inverse-primary" onClick={onPrimaryClick}>
             {primaryLabel}
           </SmartLink>
           {secondaryLabel && secondaryHref && (
