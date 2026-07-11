@@ -85,7 +85,7 @@ export const advisors: Advisor[] = [
     tags: ['Organizational Psychology', 'Leadership Development', 'AI Adoption'],
   },
   {
-    name: 'Gvantsa Mdinaradze',
+    name: 'Gwen Mdinaradze',
     title: 'Founder & CEO, EdBridge',
     bio: 'Founder and CEO of EdBridge, a learning consultancy that connects capability development directly to organizational culture and business outcomes. A Harvard alumna and University of Pennsylvania doctoral scholar, Gwen brings expertise in behavioral science, adaptive leadership, and enterprise performance — enriching Equa\'s ability to translate identity insights into lasting organizational change.',
     headshot: '/advisors/gvantsa-mdinaradze.jpg',

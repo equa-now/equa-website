@@ -18,7 +18,7 @@ export function BoardPage() {
   return (
     <>
       <Hero
-        overline="Advisory board"
+        overline="The Equa Strategic Collective Advisory Board"
         headline="Guided by leaders who have built and scaled marketing at the highest levels."
         subheadline="Equa's advisors bring operating experience from globally recognized brands, academic institutions, and venture-backed companies."
       />
