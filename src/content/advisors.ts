@@ -162,7 +162,7 @@ export const logos: Logo[] = [
   { src: '/logos/meta.svg', alt: 'Meta' },
   { src: '/logos/myyearbook.svg', alt: 'myYearbook' },
   { src: '/logos/national-science-foundation.svg', alt: 'National Science Foundation' },
-  { src: '/logos/nbc.svg', alt: 'NBC' },
+  { src: '/logos/nbc.png', alt: 'NBC' },
   { src: '/logos/new-amsterdam-gin.svg', alt: 'New Amsterdam Gin' },
   { src: '/logos/nike.svg', alt: 'Nike' },
   { src: '/logos/patron.svg', alt: 'Patrón' },
