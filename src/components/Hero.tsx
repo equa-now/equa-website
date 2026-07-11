@@ -1,10 +1,10 @@
-interface PageHeroProps {
+interface HeroProps {
   overline?: string;
   headline: string;
   subheadline?: string;
 }
 
-export function PageHero({ overline, headline, subheadline }: PageHeroProps) {
+export function Hero({ overline, headline, subheadline }: HeroProps) {
   return (
     <section className="page-hero">
       <div className="page-hero-inner">

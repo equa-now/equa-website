@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-interface CTASectionProps {
+interface CTAProps {
   headline: string;
   sub?: string;
   primaryLabel: string;
@@ -27,7 +27,7 @@ function SmartLink({
   return <a href={href} className={className} onClick={onClick}>{children}</a>;
 }
 
-export function CTASection({
+export function CTA({
   headline,
   sub,
   primaryLabel,
@@ -35,7 +35,7 @@ export function CTASection({
   onPrimaryClick,
   secondaryLabel,
   secondaryHref,
-}: CTASectionProps) {
+}: CTAProps) {
   return (
     <section className="cta-section cta-dark">
       <div className="cta-inner">

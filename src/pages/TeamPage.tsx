@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { PageHero } from '../components/PageHero';
-import { CTASection } from '../components/CTASection';
+import { Hero } from '../components/Hero';
+import { CTA } from '../components/CTA';
 import { TRY_EQUA_URL, trackTryEqua } from '../config';
 
 const pillars = [
@@ -42,14 +42,14 @@ const pillars = [
   },
 ];
 
-export function Team() {
+export function TeamPage() {
   useEffect(() => {
     document.title = 'Equa Team | Americus Reed and Jeremiah Marble';
   }, []);
 
   return (
     <>
-      <PageHero
+      <Hero
         overline="The founders"
         headline="Identity science meets AI execution."
         subheadline="Equa is built by people who have spent careers at the intersection of marketing strategy, academic research, and AI product development."
@@ -130,7 +130,7 @@ export function Team() {
         </div>
       </section>
 
-      <CTASection
+      <CTA
         headline="See how Equa turns strategy into sharper decisions."
         primaryLabel="Try Equa"
         primaryHref={TRY_EQUA_URL}

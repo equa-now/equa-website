@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { CTASection } from '../components/CTASection';
+import { CTA } from '../components/CTA';
 import { TRY_EQUA_URL, trackTryEqua } from '../config';
 
 const workflowSteps = [
@@ -55,7 +55,7 @@ const outcomes = [
   'More confident marketing decisions',
 ];
 
-export function Solution() {
+export function SolutionPage() {
   useEffect(() => {
     document.title = 'Equa Solution | AI-Powered Segmentation, Targeting, Positioning and Messaging';
   }, []);
@@ -191,7 +191,7 @@ export function Solution() {
         </div>
       </section>
 
-      <CTASection
+      <CTA
         headline="Ready to bring more clarity to your marketing strategy?"
         primaryLabel="Try Equa"
         primaryHref={TRY_EQUA_URL}

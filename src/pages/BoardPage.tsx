@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { PageHero } from '../components/PageHero';
-import { CTASection } from '../components/CTASection';
+import { Hero } from '../components/Hero';
+import { CTA } from '../components/CTA';
 import { advisors, logos } from '../content/advisors';
 import { TRY_EQUA_URL, trackTryEqua } from '../config';
 
@@ -10,14 +10,14 @@ function truncate(text: string, maxWords: number): string {
   return words.slice(0, maxWords).join(' ') + '…';
 }
 
-export function Board() {
+export function BoardPage() {
   useEffect(() => {
     document.title = 'Equa Board and Advisors';
   }, []);
 
   return (
     <>
-      <PageHero
+      <Hero
         overline="Advisory board"
         headline="Guided by leaders who have built and scaled marketing at the highest levels."
         subheadline="Equa's advisors bring operating experience from globally recognized brands, academic institutions, and venture-backed companies."
@@ -70,7 +70,7 @@ export function Board() {
         </p>
       </section>
 
-      <CTASection
+      <CTA
         headline="Ready to see Equa in action?"
         primaryLabel="Try Equa"
         primaryHref={TRY_EQUA_URL}

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { CTASection } from '../components/CTASection';
+import { CTA } from '../components/CTA';
 import { logos } from '../content/advisors';
 import { TRY_EQUA_URL, trackTryEqua } from '../config';
 
@@ -36,7 +36,7 @@ const CREDIBILITY_LOGO_ALTS = [
 
 const credibilityLogos = logos.filter((l) => CREDIBILITY_LOGO_ALTS.includes(l.alt));
 
-export function Home() {
+export function HomePage() {
   useEffect(() => {
     document.title = 'Equa | AI Strategy Tools for Marketing Leaders';
   }, []);
@@ -119,7 +119,7 @@ export function Home() {
       </section>
 
       {/* ── Final CTA ────────────────────────────────────────────────── */}
-      <CTASection
+      <CTA
         headline="Make your next marketing decision with greater confidence."
         primaryLabel="Try Equa"
         primaryHref={TRY_EQUA_URL}
