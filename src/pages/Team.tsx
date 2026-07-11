@@ -1,5 +1,7 @@
+import { useEffect } from 'react';
 import { PageHero } from '../components/PageHero';
 import { CTASection } from '../components/CTASection';
+import { TRY_EQUA_URL, trackTryEqua } from '../config';
 
 const pillars = [
   {
@@ -11,7 +13,7 @@ const pillars = [
     ),
     title: 'Research-backed strategy',
     description:
-      'Equa\'s approach is grounded in decades of academic research on identity, behavior, and what actually drives customer decisions — not intuition or trend-chasing.',
+      "Equa's approach is grounded in decades of academic research on identity, behavior, and what actually drives customer decisions — not intuition or trend-chasing.",
   },
   {
     icon: (
@@ -41,6 +43,10 @@ const pillars = [
 ];
 
 export function Team() {
+  useEffect(() => {
+    document.title = 'Equa Team | Americus Reed and Jeremiah Marble';
+  }, []);
+
   return (
     <>
       <PageHero
@@ -61,7 +67,7 @@ export function Team() {
               </div>
               <div className="founder-card-body">
                 <p className="founder-role">Co-founder · Product &amp; AI Systems</p>
-                <h2 className="founder-name">Jeremiah Marble</h2>
+                <h3 className="founder-name">Jeremiah Marble</h3>
                 <p className="founder-bio">
                   Technical AI product leader with a track record at Microsoft and Mozilla.
                   Architected the Windows Insider Program at global scale. Founded and operated
@@ -85,7 +91,7 @@ export function Team() {
               </div>
               <div className="founder-card-body">
                 <p className="founder-role">Co-founder · Identity Strategy &amp; Research</p>
-                <h2 className="founder-name">Americus Reed II</h2>
+                <h3 className="founder-name">Americus Reed II</h3>
                 <p className="founder-bio">
                   Wharton marketing professor and one of the world's foremost academic experts on
                   consumer identity, branding, and behavior. Bridges decades of research with
@@ -126,10 +132,11 @@ export function Team() {
 
       <CTASection
         headline="See how Equa turns strategy into sharper decisions."
-        primaryLabel="Explore the solution"
-        primaryHref="/solution"
-        secondaryLabel="Book a working session"
-        secondaryHref="mailto:hello@equa.now"
+        primaryLabel="Try Equa"
+        primaryHref={TRY_EQUA_URL}
+        onPrimaryClick={() => trackTryEqua('team_cta')}
+        secondaryLabel="Explore the solution"
+        secondaryHref="/solution"
       />
     </>
   );

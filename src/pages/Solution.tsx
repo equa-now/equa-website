@@ -1,5 +1,7 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CTASection } from '../components/CTASection';
+import { TRY_EQUA_URL, trackTryEqua } from '../config';
 
 const workflowSteps = [
   {
@@ -12,7 +14,7 @@ const workflowSteps = [
     step: '02',
     title: 'Targeting',
     description:
-      'Prioritize the segments with the strongest fit, urgency, and business value. Stop spreading resources across audiences that won\'t convert.',
+      "Prioritize the segments with the strongest fit, urgency, and business value. Stop spreading resources across audiences that won't convert.",
   },
   {
     step: '03',
@@ -54,6 +56,10 @@ const outcomes = [
 ];
 
 export function Solution() {
+  useEffect(() => {
+    document.title = 'Equa Solution | AI-Powered Segmentation, Targeting, Positioning and Messaging';
+  }, []);
+
   return (
     <>
       {/* Hero */}
@@ -69,8 +75,12 @@ export function Solution() {
             positioning, and messaging — powered by AI, grounded in identity science.
           </p>
           <div className="hero-actions">
-            <a href="mailto:hello@equa.now" className="button button-primary">
-              Book a working session
+            <a
+              href={TRY_EQUA_URL}
+              className="button button-primary"
+              onClick={() => trackTryEqua('solution_hero')}
+            >
+              Try Equa
             </a>
             <Link to="/team" className="button button-secondary">
               Meet the team
@@ -183,8 +193,9 @@ export function Solution() {
 
       <CTASection
         headline="Ready to bring more clarity to your marketing strategy?"
-        primaryLabel="Book a working session"
-        primaryHref="mailto:hello@equa.now"
+        primaryLabel="Try Equa"
+        primaryHref={TRY_EQUA_URL}
+        onPrimaryClick={() => trackTryEqua('solution_cta')}
         secondaryLabel="Meet the team"
         secondaryHref="/team"
       />

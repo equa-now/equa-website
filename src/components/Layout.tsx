@@ -28,9 +28,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <NavLink to="/board" className={({ isActive }) => isActive ? 'nav-active' : undefined}>
                 Board
               </NavLink>
-              <a href={CONTACT_URL}>Request a conversation</a>
             </div>
-            <a href={TRY_EQUA_URL} className="nav-cta">
+            <a
+              href={TRY_EQUA_URL}
+              className="nav-cta"
+              onClick={() => {
+                if (typeof gtag === 'function') gtag('event', 'try_equa_click', { section: 'nav' });
+              }}
+            >
               Try Equa
             </a>
           </nav>
@@ -41,7 +46,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       <footer className="site-footer">
         <div className="site-footer-inner">
-          <img src="/images/equa-logo-primary.png" alt="Equa" className="footer-logo" />
+          <Link to="/" aria-label="Equa home">
+            <img src="/images/equa-logo-primary.png" alt="Equa" className="footer-logo" />
+          </Link>
           <div className="footer-links">
             <a href={CONTACT_URL}>hello@equa.now</a>
             <a

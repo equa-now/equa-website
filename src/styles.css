@@ -254,17 +254,6 @@ a {
   gap: 0.875rem;
 }
 
-/* ─── Accent Rule ───────────────────────────────────────────────────── */
-
-.accent-rule {
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: var(--gradient-teal);
-  border-radius: 2px;
-  margin-bottom: 1.5rem;
-}
-
 /* ─── Buttons ───────────────────────────────────────────────────────── */
 
 .button {
@@ -455,89 +444,7 @@ a {
   stroke-linejoin: round;
 }
 
-/* ─── Feature Cards (Home) ──────────────────────────────────────────── */
-
-.feature-card {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow-sm);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.feature-card:hover {
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow);
-}
-
-.feature-card-step {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.75rem;
-}
-
-.feature-card h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-}
-
-.feature-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.65;
-}
-
-/* ─── Home Founder Cards (mini) ─────────────────────────────────────── */
-
-.founder-card {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-}
-
-.founder-card h3 {
-  margin: 0 0 0.4rem;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.founder-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.65;
-  flex: 1;
-}
-
-.founder-photo {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center top;
-  margin-bottom: 1.25rem;
-  border: 2px solid var(--border);
-}
-
-.founder-role-label {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.25rem;
-}
+/* ─── Founder Link (Team page) ──────────────────────────────────────── */
 
 .founder-linkedin {
   display: inline-flex;
@@ -1139,27 +1046,6 @@ a {
   margin: 0;
 }
 
-/* ─── "Who it's for" row ────────────────────────────────────────────── */
-
-.who-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1.75rem;
-}
-
-.who-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 1.1rem;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text);
-}
-
 /* ─── Responsive ────────────────────────────────────────────────────── */
 
 @media (min-width: 760px) {
@@ -1207,70 +1093,47 @@ a {
   color: var(--primary);
 }
 
-/* ─── Home: Problem Items ────────────────────────────────────────────── */
+/* ─── Home: STPM Steps Grid ──────────────────────────────────────────── */
 
-.problem-item {
+.stpm-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .stpm-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .stpm-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stpm-item {
   background: var(--bg);
   border: 1px solid var(--border);
-  border-top: 3px solid var(--accent);
-  border-radius: 10px;
-  padding: 1.5rem;
-}
-
-.problem-item p {
-  margin: 0;
-  font-size: 0.97rem;
-  line-height: 1.72;
-  color: var(--text);
-}
-
-/* ─── Home: Workflow Chain ───────────────────────────────────────────── */
-
-.workflow-chain {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-}
-
-.workflow-chain-step {
-  display: inline-block;
-  padding: 0.5rem 1.25rem;
-  background: var(--bg);
-  border: 1px solid var(--border-strong);
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text);
-  letter-spacing: -0.01em;
-}
-
-.workflow-chain-arrow {
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-
-/* ─── Home: Product Preview Placeholder ─────────────────────────────── */
-
-.product-preview-placeholder {
-  background: var(--surface);
-  border: 2px dashed var(--border-strong);
   border-radius: 12px;
-  min-height: 240px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  text-align: center;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
 }
 
-.product-preview-placeholder p {
+.stpm-label {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.stpm-text {
   margin: 0;
-  color: var(--muted-light);
-  font-size: 0.9rem;
+  color: var(--muted);
+  font-size: 0.91rem;
+  line-height: 1.7;
 }
 
 /* ─── Home: Credibility Section ──────────────────────────────────────── */
