@@ -1200,8 +1200,9 @@ a {
     gap: 3rem;
   }
 
+  /* Portrait (9:16) video — cap width so height stays manageable */
   .video-player-wrap {
-    flex: 0 0 58%;
+    flex: 0 0 340px;
     min-width: 0;
   }
 
