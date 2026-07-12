@@ -5,6 +5,7 @@
       "/images/*",
       "/advisors/*",
       "/logos/*",
+      "/videos/*",
       "/favicon.ico",
       "/*.css",
       "/*.js",
@@ -15,7 +16,8 @@
       "/*.svg",
       "/*.webp",
       "/*.woff",
-      "/*.woff2"
+      "/*.woff2",
+      "/*.mp4"
     ]
   }
 }

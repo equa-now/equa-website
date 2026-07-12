@@ -1178,3 +1178,86 @@ a {
 .credibility-logo-strip {
   margin-top: 2.5rem;
 }
+
+/* ─── Video Section (Solution page) ─────────────────────────────────── */
+
+.video-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.video-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1000px) {
+  .video-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .video-player-wrap {
+    flex: 0 0 58%;
+    min-width: 0;
+  }
+
+  .video-side {
+    flex: 1 1 0;
+    min-width: 0;
+    padding-top: 0.5rem;
+  }
+}
+
+.video-player {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  background: var(--primary);
+}
+
+.video-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.video-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.video-point-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gradient-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+.video-point-text {
+  margin: 0;
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.5;
+}

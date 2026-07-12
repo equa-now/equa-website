@@ -1,59 +1,47 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CTA } from '../components/CTA';
+import { logos } from '../content/advisors';
 import { TRY_EQUA_URL, trackTryEqua } from '../config';
 
 const workflowSteps = [
   {
     step: '01',
-    title: 'Segmentation',
-    description:
-      'Map the market using identity-driven customer segments — not just demographics, but how people actually think and choose.',
+    title: 'Segment',
+    description: 'Identify meaningful customer segments based on identity, motivations, and behavior.',
   },
   {
     step: '02',
-    title: 'Targeting',
-    description:
-      "Prioritize the segments with the strongest fit, urgency, and business value. Stop spreading resources across audiences that won't convert.",
+    title: 'Target',
+    description: 'Compare and prioritize the audiences with the strongest strategic potential.',
   },
   {
     step: '03',
-    title: 'Positioning',
-    description:
-      'Generate and compare positioning options for your highest-value audiences. Find the angle that is strategically sound and emotionally resonant.',
+    title: 'Position',
+    description: 'Develop differentiated positioning designed for the customers who matter most.',
   },
   {
     step: '04',
-    title: 'Messaging',
-    description:
-      'Translate strategy into messages teams can test, use, and refine. Close the gap between what Marketing creates and what Sales actually uses.',
+    title: 'Message',
+    description: 'Generate messaging aligned with the selected audience and strategic position.',
   },
 ];
 
-const questions = [
-  'Are we focused on the right customers?',
-  'Are we wasting budget on the wrong campaigns?',
-  "Why isn't Sales using our messaging?",
-  'Why do we keep revisiting strategy?',
-  "How do we prove marketing's impact?",
-  'Are we moving fast enough?',
-];
-
-const audiences = [
-  { role: 'CMOs', description: 'Align the team on strategy before committing resources.' },
-  { role: 'VPs of Marketing', description: 'Drive clearer prioritization across segments and campaigns.' },
-  { role: 'Product Marketing', description: 'Build positioning that holds across audiences and channels.' },
-  { role: 'GTM & Growth Teams', description: 'Move from assumptions to evidence-backed targeting.' },
+const videoPoints = [
+  'Built on consumer identity science',
+  'AI recommends; marketers decide',
+  'Designed to align Marketing, Product, and Sales',
 ];
 
 const outcomes = [
-  'Faster strategic alignment',
-  'Better campaign focus',
-  'Clearer, consistent messaging',
-  'Stronger Sales–Marketing alignment',
-  'Less strategy rework',
-  'More confident marketing decisions',
+  'Ranked target segments',
+  'AI-generated positioning options',
+  'Messaging tailored to your audience',
+  'A strategy your team can align around',
 ];
+
+const CREDIBILITY_LOGO_ALTS = ['Wharton School', 'Nike', 'Coca-Cola', 'Meta', 'BCG', 'JetBlue', 'LVMH', 'Intel'];
+const credibilityLogos = logos.filter((l) => CREDIBILITY_LOGO_ALTS.includes(l.alt));
 
 export function SolutionPage() {
   useEffect(() => {
@@ -62,17 +50,17 @@ export function SolutionPage() {
 
   return (
     <>
-      {/* Hero */}
+      {/* ── Hero ─────────────────────────────────────────────────────── */}
       <section className="hero-section">
         <div className="hero-copy">
           <p className="hero-eyebrow">
             <span className="hero-eyebrow-dot" aria-hidden="true" />
             The Equa solution
           </p>
-          <h1>From scattered assumptions to sharper decisions.</h1>
+          <h1>Marketing decisions shouldn't rely on guesswork.</h1>
           <p className="hero-description">
-            Equa gives marketing teams a structured path through segmentation, targeting,
-            positioning, and messaging — powered by AI, grounded in identity science.
+            AI-powered segmentation, targeting, positioning, and messaging built on consumer
+            identity science.
           </p>
           <div className="hero-actions">
             <a
@@ -80,109 +68,97 @@ export function SolutionPage() {
               className="button button-primary"
               onClick={() => trackTryEqua('solution_hero')}
             >
-              Try Equa
+              Try Equa Free
             </a>
-            <Link to="/team" className="button button-secondary">
-              Meet the team
-            </Link>
+            <a href="#video" className="button button-secondary">
+              Watch the overview
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Problem */}
-      <section className="section-band" id="problem" aria-labelledby="problem-heading">
+      {/* ── How Equa Works ───────────────────────────────────────────── */}
+      <section className="section-band" id="workflow" aria-labelledby="workflow-heading">
         <div className="section-inner">
           <div className="section-header">
-            <span className="section-overline">The problem</span>
-            <h2 id="problem-heading">More data. Less clarity.</h2>
+            <span className="section-overline">How Equa works</span>
+            <h2 id="workflow-heading">How Equa Works</h2>
+            <p className="section-sub">
+              Four connected steps built so each stage informs the next.
+            </p>
           </div>
-          <div className="problem-columns">
-            <div>
-              <p className="problem-text">
-                Marketing teams have more data than ever — and still struggle to agree on who to
-                target, why they matter, how to position, and what to say.
-              </p>
-            </div>
-            <div>
-              <p className="problem-text">
-                Strategy gets revisited. Messaging gets diluted. Sales doesn't use what Marketing
-                creates. And no one can explain why.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* STPM Workflow Pipeline */}
-      <section className="section" id="workflow" aria-labelledby="workflow-heading">
-        <div className="section-header">
-          <span className="section-overline">The Equa workflow</span>
-          <h2 id="workflow-heading">A structured path from research to message.</h2>
-          <p className="section-sub">
-            Four connected steps. One consistent methodology. Built so each stage informs the next.
-          </p>
-        </div>
-
-        <div className="workflow-pipeline" role="list" aria-label="STPM workflow steps">
-          {workflowSteps.map((s, i) => (
-            <div key={s.step} className="workflow-pipeline-item" role="listitem">
-              <article className="workflow-step-card">
-                <div className="workflow-step">{s.step}</div>
-                <h3 className="workflow-title">{s.title}</h3>
-                <p className="workflow-desc">{s.description}</p>
-              </article>
-              {i < workflowSteps.length - 1 && (
-                <div className="workflow-connector" aria-hidden="true">→</div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Questions */}
-      <section className="section-band" id="questions" aria-labelledby="questions-heading">
-        <div className="section-inner">
-          <div className="section-header">
-            <span className="section-overline">What Equa helps answer</span>
-            <h2 id="questions-heading">The questions every marketing leader is asking.</h2>
-          </div>
-          <div className="questions-grid">
-            {questions.map((q, i) => (
-              <div key={i} className="question-item">
-                <span className="question-arrow" aria-hidden="true">→</span>
-                <p>{q}</p>
+          <div className="workflow-pipeline" role="list" aria-label="Equa workflow steps">
+            {workflowSteps.map((s, i) => (
+              <div key={s.step} className="workflow-pipeline-item" role="listitem">
+                <article className="workflow-step-card">
+                  <div className="workflow-step">{s.step}</div>
+                  <h3 className="workflow-title">{s.title}</h3>
+                  <p className="workflow-desc">{s.description}</p>
+                </article>
+                {i < workflowSteps.length - 1 && (
+                  <div className="workflow-connector" aria-hidden="true">→</div>
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Audiences */}
-      <section className="section" id="audiences" aria-labelledby="audiences-heading">
+      {/* ── Video ────────────────────────────────────────────────────── */}
+      <section className="section" id="video" aria-labelledby="video-heading">
         <div className="section-header">
-          <span className="section-overline">Designed for marketing leaders</span>
-          <h2 id="audiences-heading">Built for the people responsible for growth.</h2>
+          <span className="section-overline">See it in action</span>
+          <h2 id="video-heading">See Equa in Action</h2>
+          <p className="section-sub">
+            See how Equa combines consumer identity science and AI to help marketers move from
+            customer understanding to clearer strategic decisions.
+          </p>
         </div>
-        <div className="card-grid cards-four">
-          {audiences.map((a) => (
-            <article key={a.role} className="audience-card">
-              <h3 className="audience-role">{a.role}</h3>
-              <p className="audience-desc">{a.description}</p>
-            </article>
-          ))}
+        <div className="video-layout">
+          <div className="video-player-wrap">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              className="video-player"
+              aria-label="Equa brand overview: AI-powered segmentation, targeting, positioning, and messaging"
+            >
+              <source src="/videos/equa-brand-overview.mp4" type="video/mp4" />
+              Your browser does not support the video element.
+            </video>
+          </div>
+          <div className="video-side">
+            <ul className="video-points" aria-label="Key differentiators">
+              {videoPoints.map((point) => (
+                <li key={point} className="video-point">
+                  <span className="video-point-check" aria-hidden="true">✓</span>
+                  <p className="video-point-text">{point}</p>
+                </li>
+              ))}
+            </ul>
+            <div>
+              <a
+                href={TRY_EQUA_URL}
+                className="button button-primary"
+                onClick={() => trackTryEqua('solution_video')}
+              >
+                Try Equa Free
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Outcomes */}
+      {/* ── Outcomes ─────────────────────────────────────────────────── */}
       <section className="section-band" id="outcomes" aria-labelledby="outcomes-heading">
         <div className="section-inner">
           <div className="section-header">
-            <span className="section-overline">What sharper strategy delivers</span>
-            <h2 id="outcomes-heading">Decisions that compound over time.</h2>
+            <span className="section-overline">Tangible deliverables</span>
+            <h2 id="outcomes-heading">What You'll Leave With</h2>
           </div>
-          <div className="outcomes-grid">
-            {outcomes.map((o, i) => (
-              <div key={i} className="outcome-item">
+          <div className="card-grid cards-two">
+            {outcomes.map((o) => (
+              <div key={o} className="outcome-item">
                 <span className="outcome-check" aria-hidden="true">✓</span>
                 <span>{o}</span>
               </div>
@@ -191,13 +167,37 @@ export function SolutionPage() {
         </div>
       </section>
 
+      {/* ── Credibility ──────────────────────────────────────────────── */}
+      <section className="section" id="credibility" aria-labelledby="credibility-heading">
+        <div className="section-header">
+          <h2 id="credibility-heading">Built on research. Guided by experience.</h2>
+          <p className="section-sub">
+            Founded by a Wharton identity scientist and an AI product builder. Advised by CMOs,
+            researchers, and leaders from globally recognized organizations.{' '}
+            <Link to="/board" className="section-sub-link">
+              Meet the board →
+            </Link>
+          </p>
+        </div>
+        <div className="logo-strip credibility-logo-strip">
+          {credibilityLogos.map((logo) => (
+            <div key={logo.alt} className="logo-item">
+              <img src={logo.src} alt={logo.alt} loading="lazy" />
+            </div>
+          ))}
+        </div>
+        <p className="logo-disclaimer">
+          Prior affiliations and institutions of Equa's advisory network.
+        </p>
+      </section>
+
+      {/* ── Final CTA ────────────────────────────────────────────────── */}
       <CTA
-        headline="Ready to bring more clarity to your marketing strategy?"
-        primaryLabel="Try Equa"
+        headline="Turn customer understanding into strategy."
+        sub="Use Equa to move from segmentation to messaging with greater clarity, speed, and confidence."
+        primaryLabel="Try Equa Free"
         primaryHref={TRY_EQUA_URL}
-        onPrimaryClick={() => trackTryEqua('solution_cta')}
-        secondaryLabel="Meet the team"
-        secondaryHref="/team"
+        onPrimaryClick={() => trackTryEqua('solution_final_cta')}
       />
     </>
   );
