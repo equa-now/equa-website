@@ -123,7 +123,8 @@ export function SolutionPage() {
               className="video-player"
               aria-label="Equa brand overview: AI-powered segmentation, targeting, positioning, and messaging"
             >
-              <source src="/videos/equa-brand-overview.mp4" type="video/mp4" />
+              <source src="/videos/equa-brand-mobile.mp4" type="video/mp4" media="(max-width: 999px)" />
+              <source src="/videos/equa-brand-desktop.mp4" type="video/mp4" />
               Your browser does not support the video element.
             </video>
           </div>
