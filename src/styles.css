@@ -1196,25 +1196,24 @@ a {
 @media (min-width: 1000px) {
   .video-layout {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 3rem;
   }
 
-  /* Portrait (9:16) video — cap width so height stays manageable */
   .video-player-wrap {
-    flex: 0 0 340px;
+    flex: 0 0 58%;
     min-width: 0;
   }
 
   .video-side {
     flex: 1 1 0;
     min-width: 0;
-    padding-top: 0.5rem;
   }
 }
 
 .video-player {
   width: 100%;
+  aspect-ratio: 16 / 9;
   display: block;
   border-radius: 12px;
   box-shadow: var(--shadow-lg);
