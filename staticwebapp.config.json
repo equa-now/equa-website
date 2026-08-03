@@ -1,4 +1,11 @@
 {
+  "routes": [
+    {
+      "route": "/wemba",
+      "redirect": "https://equa-test-app.azurewebsites.net/",
+      "statusCode": 302
+    }
+  ],
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": [
